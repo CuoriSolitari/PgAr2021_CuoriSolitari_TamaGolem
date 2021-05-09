@@ -1,0 +1,2 @@
+# PgAr2021_CuoriSolitari_TamaGolem
+TamaGolem
