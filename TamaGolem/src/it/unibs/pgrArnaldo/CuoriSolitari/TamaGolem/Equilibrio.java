@@ -1,5 +1,11 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
-public class Equilibrio {
+import java.util.ArrayList;
+
+public class Equilibrio{
+
+    private Elemento[] elementi;
+    private int potenza;
+    private boolean forza;
 
 }
