@@ -8,4 +8,12 @@ public class Equilibrio{
     private int potenza;
     private boolean forza;
 
+    /**
+     * Questo metodo crea l'equilibrio tra i vari elementi esistenti
+     */
+    public void creaEquilibrio(){
+
+
+    }
+
 }
