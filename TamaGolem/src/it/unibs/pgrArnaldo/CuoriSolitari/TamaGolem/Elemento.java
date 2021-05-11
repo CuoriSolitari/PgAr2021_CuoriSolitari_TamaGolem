@@ -4,7 +4,8 @@ public enum Elemento {
 
 
     ACQUA("Acqua", 1),
-    ARIA("Aria", 2);
+    ARIA("Aria", 2),
+    FUOCO("Fuoco", 3);
 
     private String nome;
     private int id;
