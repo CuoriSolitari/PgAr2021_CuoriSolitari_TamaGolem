@@ -4,15 +4,21 @@ import java.util.ArrayList;
 
 public class Equilibrio{
 
-    private Elemento[] elementi;
+    private static Elemento[] elementi = {Elemento.ACQUA, Elemento.ARIA};
     private int potenza;
     private boolean forza;
 
     /**
      * Questo metodo crea l'equilibrio tra i vari elementi esistenti
      */
-    public void creaEquilibrio(){
+    public static void creaEquilibrio(){
 
+        int rand = Math.subtractExact(1,2);
+        for (Elemento e: elementi){
+            if(e.getId() == rand){
+
+            }
+        }
 
     }
 

@@ -11,8 +11,11 @@ public class Battaglia {
      */
     public void play(){
 
-        for(int i=0; i<3; i++){
+        for(fase=0; fase<3; fase++){
 
+            if(fase == 1){
+                Equilibrio.creaEquilibrio();
+            }
 
         }
     }
