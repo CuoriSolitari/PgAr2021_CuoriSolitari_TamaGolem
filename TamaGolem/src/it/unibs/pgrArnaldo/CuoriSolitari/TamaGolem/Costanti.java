@@ -10,6 +10,7 @@ public class Costanti {
 
     //STRINGHE:
 
+    public final static String BENVENUTO = "Benvenuti!!!\nSe siete qui è perchè non avete paura di far combattere clandestinamente i vostri Tamagolem, la regola è solo una: NON FATEVI BECCARE\nMa ora passiamo alle cose serie...\n";
     public final static String NOME_GIOCATORE = "Inserisci il tuo nome giocatore ";
     public final static String NOME_TAMAGOLEM = "Inserisci il nome del tuo TamaGolem: ";
     public final static String CREA_TAMAGOLEM = "\n%s iscrivi i tuoi Tamagolem: ";

@@ -8,7 +8,7 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        System.out.println("ciao");
+        System.out.println(Costanti.BENVENUTO);
 
         //Chiede di inserire il nome ai giocatori
         String g1 = InputDati.leggiStringaNonVuota(Costanti.NOME_GIOCATORE + "1: ");
