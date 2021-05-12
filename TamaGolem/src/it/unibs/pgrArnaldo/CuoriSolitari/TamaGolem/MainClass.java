@@ -2,11 +2,12 @@ package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
 import it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem.UniBSFpLib.src.it.unibs.fp.mylib.InputDati;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainClass {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println(Costanti.BENVENUTO);
 
@@ -44,12 +45,29 @@ public class MainClass {
             else if(fase == 2){
                 System.out.println(Costanti.START_GAME);
 
-                //Il giocatore 1 attribuisce al suo tamagolem gli elementi
+                //GIOCATORE 1; attribuisce al suo tamagolem gli elementi
                 System.out.println(String.format(Costanti.TURNO, g1) + Costanti.SCELTA);
+                //Stampa le pietre che il golem può ingurgitare
                 int k=0;
                 for (Elemento e: Equilibrio.getElementi()){
                     k++;
                     System.out.println(k + "- " + e);
+                }
+                for(int i=0; i<Costanti.NUM_PIETRE; i++) {
+                    int comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i+1), 1, Equilibrio.getElementi().length);
+                }
+
+
+                //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
+                System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
+                //Stampa le pietre che il golem può ingurgitare
+                k=0;
+                for (Elemento e: Equilibrio.getElementi()){
+                    k++;
+                    System.out.println(k + "- " + e);
+                }
+                for(int i=0; i<Costanti.NUM_PIETRE; i++) {
+                    int comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i+1), 1, Equilibrio.getElementi().length);
                 }
 
             }
