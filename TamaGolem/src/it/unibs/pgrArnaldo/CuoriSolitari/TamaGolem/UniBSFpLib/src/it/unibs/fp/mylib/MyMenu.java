@@ -1,4 +1,4 @@
-package UniBSFpLib.bin.it.unibs.fp.mylib.UniBSFpLib.src.it.unibs.fp.mylib;
+package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem.UniBSFpLib.src.it.unibs.fp.mylib;
 /*
 Questa classe rappresenta un menu testuale generico a piu' voci
 Si suppone che la voce per uscire sia sempre associata alla scelta 0 

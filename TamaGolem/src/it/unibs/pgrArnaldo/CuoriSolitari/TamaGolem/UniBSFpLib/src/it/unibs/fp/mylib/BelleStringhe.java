@@ -1,4 +1,4 @@
-package UniBSFpLib.bin.it.unibs.fp.mylib.UniBSFpLib.src.it.unibs.fp.mylib;
+package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem.UniBSFpLib.src.it.unibs.fp.mylib;
 public class BelleStringhe
 {
 

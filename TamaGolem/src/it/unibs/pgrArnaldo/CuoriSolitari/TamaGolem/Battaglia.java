@@ -1,8 +1,5 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
-import UniBSFpLib.bin.it.unibs.fp.mylib.UniBSFpLib.src.it.unibs.fp.mylib.InputDati;
-
-import java.util.ArrayList;
 
 public class Battaglia {
 
