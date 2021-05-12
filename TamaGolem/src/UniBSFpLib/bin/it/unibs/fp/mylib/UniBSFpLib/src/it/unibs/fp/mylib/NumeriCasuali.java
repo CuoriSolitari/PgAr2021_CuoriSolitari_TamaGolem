@@ -1,4 +1,4 @@
-package it.unibs.fp.mylib;
+package UniBSFpLib.bin.it.unibs.fp.mylib.UniBSFpLib.src.it.unibs.fp.mylib;
 
 import java.util.*;
 
