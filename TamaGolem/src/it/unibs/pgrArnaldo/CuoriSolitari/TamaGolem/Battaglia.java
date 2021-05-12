@@ -21,8 +21,9 @@ public class Battaglia {
 
             else if(fase == 2){
 
+                System.out.println(Costanti.START_GAME);
 
-
+                System.out.println(String.format(Costanti.TURNO));
             }
 
             else if(fase == 3){

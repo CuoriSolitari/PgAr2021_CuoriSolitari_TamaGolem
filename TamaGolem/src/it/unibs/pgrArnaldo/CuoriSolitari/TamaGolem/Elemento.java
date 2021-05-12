@@ -15,6 +15,11 @@ public enum Elemento {
         this.id = _id;
     }
 
+    @Override
+    public String toString() {
+        return nome;
+    }
+
     public String getNome() {
         return nome;
     }

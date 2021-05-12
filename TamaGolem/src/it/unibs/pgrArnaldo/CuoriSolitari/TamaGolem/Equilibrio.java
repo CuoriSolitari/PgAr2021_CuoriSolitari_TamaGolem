@@ -1,6 +1,5 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Equilibrio{
@@ -35,4 +34,7 @@ public class Equilibrio{
 
     }
 
+    public static Elemento[] getElementi() {
+        return elementi;
+    }
 }

@@ -34,5 +34,30 @@ public class MainClass {
             tama_golems2.add(tama);
         }
         Squadra squadra_2 = new Squadra(g1, tama_golems1);
+
+        for(int fase=0; fase<3; fase++){
+
+            if(fase == 1){
+                Equilibrio.creaEquilibrio();
+            }
+
+            else if(fase == 2){
+                System.out.println(Costanti.START_GAME);
+
+                //Il giocatore 1 attribuisce al suo tamagolem gli elementi
+                System.out.println(String.format(Costanti.TURNO, g1) + Costanti.SCELTA);
+                int k=0;
+                for (Elemento e: Equilibrio.getElementi()){
+                    k++;
+                    System.out.println(k + "- " + e);
+                }
+
+            }
+
+            else if(fase == 3){
+
+            }
+
+        }
     }
 }
