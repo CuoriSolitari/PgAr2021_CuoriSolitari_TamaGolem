@@ -1,35 +1,39 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class Battaglia {
 
     private boolean vincitore;
     private int fase;
+    private static TamaGolem esausto;
 
     /**
-     * Questo metodo si occupa di scorrere le varie fasi del gioco
+     * Fa scontrare due tamagolem fino a quando uno non è esusto e lo ritorna
      *
+     * @param t1
+     * @param t2
+     * @return
      */
-    public void play(){
+    public static TamaGolem combattimento(TamaGolem t1, TamaGolem t2){
 
+        Deque<Pietra> pietre1 = new ArrayDeque<>();
+        Deque<Pietra> pietre2 = new ArrayDeque<>();
 
-        for(fase=0; fase<3; fase++){
+        //Inizializza la deque di pietre1
+        for(int i=0; i<t1.getPietre().size(); i++){
+            pietre1.add(t1.getPietre().get(i));
+        }
+        //Inizializza la deque di pietre2
+        for(int i=0; i<t2.getPietre().size(); i++){
+            pietre2.add(t1.getPietre().get(i));
+        }
 
-            if(fase == 1){
-                Equilibrio.creaEquilibrio();
-            }
-
-            else if(fase == 2){
-
-                System.out.println(Costanti.START_GAME);
-
-                System.out.println(String.format(Costanti.TURNO));
-            }
-
-            else if(fase == 3){
-
-            }
+        while(t1.getVita() > 0 && t2.getVita() >0){
 
         }
+        return esausto;
     }
 }

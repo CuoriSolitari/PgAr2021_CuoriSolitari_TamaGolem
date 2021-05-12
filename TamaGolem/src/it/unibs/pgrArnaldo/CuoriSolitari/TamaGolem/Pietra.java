@@ -6,7 +6,7 @@ public class Pietra {
     private int danno;
     private Elemento elemento;
 
-    public Pietra(String nome, Elemento elemento) {
+    public Pietra(Elemento elemento) {
         this.nome = nome;
         this.elemento = elemento;
     }
