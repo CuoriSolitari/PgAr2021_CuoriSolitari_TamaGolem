@@ -1,4 +1,4 @@
-package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem.UniBSFpLib.bin.it.unibs.fp.mylib;
+package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
 public class Equilibrio{
 
