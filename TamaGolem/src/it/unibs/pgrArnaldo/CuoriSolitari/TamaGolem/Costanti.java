@@ -26,11 +26,4 @@ public class Costanti {
     public final static String SCELTA = "\nEcco le pietre che il tuo TamaGolem può ingurgitare:";
     public final static String PERDITA_TAMAGOLEM = "%s il tuo TamaGolem %s è esausto\n";
 
-    public static void cls(){
-        try{
-            new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
-        }catch (Exception E){
-            System.out.println(E);
-        }
-    }
 }

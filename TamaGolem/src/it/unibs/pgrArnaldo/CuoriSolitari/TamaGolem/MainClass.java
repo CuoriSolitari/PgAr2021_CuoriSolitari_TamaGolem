@@ -1,6 +1,6 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
-import it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem.UniBSFpLib.src.it.unibs.fp.mylib.InputDati;
+import it.unibs.fp.mylib.InputDati;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -101,7 +101,6 @@ public class MainClass {
                     //Nasconde le mosse al giocatore successivo
                     for (int i = 0; i < 20; i++)
                         System.out.println("\n");
-                    Costanti.cls();
 
                     //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
                     System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
