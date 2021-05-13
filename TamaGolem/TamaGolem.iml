@@ -10,11 +10,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../../../../Utility/UniBSFpLib" />
+          <root url="file://$MODULE_DIR$/UniBSFpLib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$MODULE_DIR$/../../../../../Utility/UniBSFpLib/src" />
+          <root url="file://$MODULE_DIR$/UniBSFpLib/src" />
         </SOURCES>
       </library>
     </orderEntry>
