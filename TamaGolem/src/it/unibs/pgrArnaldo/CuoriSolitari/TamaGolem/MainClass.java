@@ -11,6 +11,31 @@ public class MainClass {
 
         System.out.println(Costanti.BENVENUTO);
 
+        //Nell'eventualità che la persona non conosca le regole può farsele spiegare
+        System.out.println(Costanti.MSG_REGOLAMENTO);
+        int comando = InputDati.leggiIntero("Comando: ", 1, 2);
+        if(comando == 1){
+            do{
+                System.out.println(Costanti.REGOLE);
+                comando = InputDati.leggiIntero("Comando: ", 1, 4);
+                //Regolamento sull'equilibrio
+                if(comando == 1){
+                    System.out.println(Costanti.REGOLE_EQUILIBRIO);
+                }
+                //Regolamento sui Tamagolem
+                else if(comando == 2){
+                    System.out.println(String.format(Costanti.REGOLE_TAMAGOLEM, Costanti.NUM_TAMAGOLEM, Costanti.NUM_PIETRE));
+                    System.out.println(Costanti.REGOLE_TAMAGOLEM2);
+                }
+                //Regolamento sullo scontro
+                else if(comando == 3){
+                    System.out.println(Costanti.REGOLE_SCONTRO);
+                }
+
+            } while (comando != 4);
+        }
+
+        System.out.println(Costanti.MSG_START);
         //Chiede di inserire il nome ai giocatori
         String g1 = InputDati.leggiStringaNonVuota(Costanti.NOME_GIOCATORE + "1: ");
         String g2 = InputDati.leggiStringaNonVuota(Costanti.NOME_GIOCATORE + "2: ");
@@ -59,7 +84,7 @@ public class MainClass {
                     }
                     for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
                         Elemento elemento = null;
-                        int comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
+                        comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
                         if (comando == 1) {
                             elemento = Elemento.ACQUA;
                         } else if (comando == 2) {
@@ -88,7 +113,7 @@ public class MainClass {
                     }
                     for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
                         Elemento elemento = null;
-                        int comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
+                        comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
                         if (comando == 1) {
                             elemento = Elemento.ACQUA;
                         } else if (comando == 2) {
