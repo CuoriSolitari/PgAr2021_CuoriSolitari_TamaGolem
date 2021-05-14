@@ -6,8 +6,6 @@ import java.util.Deque;
 
 public class Battaglia {
 
-    private boolean vincitore;
-    private int fase;
     private static TamaGolem esausto;
 
     /**
