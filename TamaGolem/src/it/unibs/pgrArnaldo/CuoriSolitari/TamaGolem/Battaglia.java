@@ -32,8 +32,8 @@ public class Battaglia {
                 System.out.println(String.format(Costanti.DANNO, t1.getNome(), -danno, t2.getNome()));
             }
 
-            System.out.println(t1.getNome() + " HP: " + t1.getVita());
-            System.out.println(t2.getNome() + " HP: " + t2.getVita() + "\n");
+            System.out.println(t1.getNome() + " ha ora " + t1.getVita() + "HP");
+            System.out.println(t2.getNome() + " ha ora " + t2.getVita() + "HP\n\n");
 
             //Fa "girare" le pietre all'interno dell'arraylist
             t1.getPietre().add(t1.getPietre().get(0));
@@ -43,7 +43,7 @@ public class Battaglia {
 
             //ritrda l'esecuzione di 5 secondi per visualizzare tutto meglio
             try {
-                Thread.sleep(3000); //tempo in millisecondi
+                Thread.sleep(5000); //tempo in millisecondi
             } catch (InterruptedException e) {
             }
         }

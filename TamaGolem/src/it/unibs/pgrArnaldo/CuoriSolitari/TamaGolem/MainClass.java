@@ -105,10 +105,6 @@ public class MainClass {
                             System.out.println("\n");
                         }
 
-                        //Nasconde le mosse al giocatore successivo
-                        for (int i = 0; i < 20; i++)
-                            System.out.println("\n");
-
                         if (tama_golems2.get(0).getPietre() == null) {
                             //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
                             System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
@@ -176,7 +172,7 @@ public class MainClass {
                 }
             }
 
-            System.out.println("Volete giocare ancora?\n1- SI\n2- NO");
+            System.out.println("\nVolete giocare ancora?\n1- SI\n2- NO");
             comando = InputDati.leggiIntero("Comando: ", 1, 2);
 
             if(comando == 2){
