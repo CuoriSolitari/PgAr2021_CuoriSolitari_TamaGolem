@@ -3,8 +3,6 @@ package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 public class Equilibrio{
 
     private static Elemento[] elementi = {Elemento.ALTAIR, Elemento.EZIO, Elemento.EDWARD, Elemento.CONNOR, Elemento.SHAY};
-    private int potenza;
-    private boolean forza;
 
     /**
      * Questo metodo crea l'equilibrio tra i vari elementi esistenti

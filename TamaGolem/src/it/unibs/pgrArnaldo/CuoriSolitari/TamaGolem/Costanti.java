@@ -24,7 +24,9 @@ public class Costanti {
     public final static String START_GAME = "\nInizia la partita...\n";
     public final static String TURNO = "È il turno di %s:";
     public final static String SCELTA = "\nEcco le pietre che il tuo TamaGolem può ingurgitare:";
-    public final static String PERDITA_TAMAGOLEM = "%s il tuo TamaGolem %s è esausto\n";
-
-
+    public final static String PERDITA_TAMAGOLEM = "\n%s il tuo TamaGolem %s è esausto\n";
+    public final static String DANNO = "%s ha subito %d di danno da %s\n";
+    public final static String VITTORIA = "%s ha vinto lo scontro!";
+    public final static String FORTE = "%s è più forte di %d dell'elemento %s";
+    public final static String ARRIVEDERCI = "\nVa bene... Alla prossima e mi raccomando: NON dite niente a nessuno...";
 }
