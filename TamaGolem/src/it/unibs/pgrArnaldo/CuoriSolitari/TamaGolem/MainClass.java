@@ -61,10 +61,12 @@ public class MainClass {
         }
         Squadra squadra_2 = new Squadra(g1, tama_golems1);
 
-        for(int fase=0; fase<3; fase++){
+        int[][] mat_eq = null;
+
+        for(int fase=1; fase<=3; fase++){
 
             if(fase == 1){
-                Equilibrio.creaEquilibrio();
+                mat_eq = Equilibrio.creaEquilibrio();
             }
 
             else if(fase == 2) {
@@ -74,60 +76,72 @@ public class MainClass {
                     ArrayList<Pietra> pietre_g1 = new ArrayList<>();
                     ArrayList<Pietra> pietre_g2 = new ArrayList<>();
 
-                    //GIOCATORE 1; attribuisce al suo tamagolem gli elementi
-                    System.out.println(String.format(Costanti.TURNO, g1) + Costanti.SCELTA);
-                    //Stampa le pietre che il golem può ingurgitare
-                    int k = 0;
-                    for (Elemento e : Equilibrio.getElementi()) {
-                        k++;
-                        System.out.println(k + "- " + e);
-                    }
-                    for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
-                        Elemento elemento = null;
-                        comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
-                        if (comando == 1) {
-                            elemento = Elemento.ACQUA;
-                        } else if (comando == 2) {
-                            elemento = Elemento.ARIA;
-                        } else if (comando == 3) {
-                            elemento = Elemento.FUOCO;
+                    if(tama_golems1.get(0).getPietre().size() == 0) {
+                        //GIOCATORE 1; attribuisce al suo tamagolem gli elementi
+                        System.out.println(String.format(Costanti.TURNO, g1) + Costanti.SCELTA);
+                        //Stampa le pietre che il golem può ingurgitare
+                        int k = 0;
+                        for (Elemento e : Equilibrio.getElementi()) {
+                            k++;
+                            System.out.println(k + "- " + e);
                         }
+                        for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
+                            Elemento elemento = null;
+                            comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
+                            if (comando == 1) {
+                                elemento = Elemento.ALTAIR;
+                            } else if (comando == 2) {
+                                elemento = Elemento.EZIO;
+                            } else if (comando == 3) {
+                                elemento = Elemento.EDWARD;
+                            } else if (comando == 4) {
+                                elemento = Elemento.CONNOR;
+                            } else if (comando == 5) {
+                                elemento = Elemento.SHAY;
+                            }
 
-                        Pietra pietra = new Pietra(elemento);
-                        pietre_g1.add(pietra);
+                            Pietra pietra = new Pietra(elemento);
+                            pietre_g1.add(pietra);
+                        }
+                        tama_golems1.get(0).setPietre(pietre_g1);
                     }
-                    tama_golems1.get(0).setPietre(pietre_g1);
 
                     //Nasconde le mosse al giocatore successivo
                     for (int i = 0; i < 20; i++)
                         System.out.println("\n");
 
-                    //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
-                    System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
-                    //Stampa le pietre che il golem può ingurgitare
-                    k = 0;
-                    for (Elemento e : Equilibrio.getElementi()) {
-                        k++;
-                        System.out.println(k + "- " + e);
-                    }
-                    for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
-                        Elemento elemento = null;
-                        comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
-                        if (comando == 1) {
-                            elemento = Elemento.ACQUA;
-                        } else if (comando == 2) {
-                            elemento = Elemento.ARIA;
-                        } else if (comando == 3) {
-                            elemento = Elemento.FUOCO;
+                    if(tama_golems2.get(0).getPietre().size() == 0) {
+                        //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
+                        System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
+                        //Stampa le pietre che il golem può ingurgitare
+                        int k = 0;
+                        for (Elemento e : Equilibrio.getElementi()) {
+                            k++;
+                            System.out.println(k + "- " + e);
                         }
+                        for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
+                            Elemento elemento = null;
+                            comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
+                            if (comando == 1) {
+                                elemento = Elemento.ALTAIR;
+                            } else if (comando == 2) {
+                                elemento = Elemento.EZIO;
+                            } else if (comando == 3) {
+                                elemento = Elemento.EDWARD;
+                            } else if (comando == 4) {
+                                elemento = Elemento.CONNOR;
+                            } else if (comando == 5) {
+                                elemento = Elemento.SHAY;
+                            }
 
-                        Pietra pietra = new Pietra(elemento);
-                        pietre_g2.add(pietra);
+                            Pietra pietra = new Pietra(elemento);
+                            pietre_g2.add(pietra);
+                        }
+                        tama_golems1.get(0).setPietre(pietre_g2);
                     }
-                    tama_golems1.get(0).setPietre(pietre_g2);
 
                     //Gioca la battaglia tra i due tamagolem ed elimina dall'array di tamagolem di uno dei due il tamagolem easusto
-                    TamaGolem esausto = Battaglia.combattimento(tama_golems1.get(0), tama_golems2.get(0));
+                    TamaGolem esausto = Battaglia.combattimento(tama_golems1.get(0), tama_golems2.get(0), mat_eq);
                     if(esausto.equals(tama_golems1.get(0))){
                         tama_golems1.remove(0);
                         System.out.println(String.format(Costanti.PERDITA_TAMAGOLEM, g1, tama_golems1.get(0).getNome()));
@@ -141,8 +155,12 @@ public class MainClass {
 
             else if(fase == 3){
 
-            }
+                if ( tama_golems1.size() == 0 ) {
 
+                } else {
+
+                }
+            }
         }
     }
 }

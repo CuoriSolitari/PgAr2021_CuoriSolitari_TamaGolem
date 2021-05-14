@@ -27,9 +27,7 @@ public class TamaGolem {
         return vita;
     }
 
-    public void setVita(int vita) {
-        this.vita = vita;
-    }
+    public void setVita(int vita) { this.vita = vita; }
 
     public ArrayList<Pietra> getPietre() {
         return pietre;
@@ -38,4 +36,6 @@ public class TamaGolem {
     public void setPietre(ArrayList<Pietra> pietre) {
         this.pietre = pietre;
     }
+
+
 }

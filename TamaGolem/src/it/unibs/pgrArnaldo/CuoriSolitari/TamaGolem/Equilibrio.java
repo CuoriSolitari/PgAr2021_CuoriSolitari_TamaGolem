@@ -2,7 +2,7 @@ package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
 public class Equilibrio{
 
-    private static Elemento[] elementi = {Elemento.ACQUA, Elemento.ARIA, Elemento.FUOCO};
+    private static Elemento[] elementi = {Elemento.ALTAIR, Elemento.EZIO, Elemento.EDWARD, Elemento.CONNOR, Elemento.SHAY};
     private int potenza;
     private boolean forza;
 

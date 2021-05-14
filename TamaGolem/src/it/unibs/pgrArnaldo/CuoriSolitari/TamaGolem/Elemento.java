@@ -3,9 +3,11 @@ package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 public enum Elemento {
 
 
-    ACQUA("Acqua", 1),
-    ARIA("Aria", 2),
-    FUOCO("Fuoco", 3);
+    ALTAIR("Pietra di Altair", 1),
+    EZIO("Pietra di Ezio", 2),
+    CONNOR("Pietra di Connor", 3),
+    EDWARD("Pietra di Edward", 4),
+    SHAY("Pietra di Shay", 5);
 
     private String nome;
     private int id;

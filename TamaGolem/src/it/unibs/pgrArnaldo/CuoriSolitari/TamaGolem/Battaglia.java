@@ -1,6 +1,7 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 
 public class Battaglia {
@@ -16,23 +17,22 @@ public class Battaglia {
      * @param t2
      * @return
      */
-    public static TamaGolem combattimento(TamaGolem t1, TamaGolem t2){
+    public static TamaGolem combattimento(TamaGolem t1, TamaGolem t2, int[][] mat){
 
-        Deque<Pietra> pietre1 = new ArrayDeque<>();
-        Deque<Pietra> pietre2 = new ArrayDeque<>();
+        int turno = 0;
+        while(t1.getVita() > 0 && t2.getVita() >0) {
 
-        //Inizializza la deque di pietre1
-        for(int i=0; i<t1.getPietre().size(); i++){
-            pietre1.add(t1.getPietre().get(i));
+            if (mat[t1.getPietre().get(0).getElemento().getId() - 1][t2.getPietre().get(0).getElemento().getId() - 1] > 0)
+                t2.setVita(t2.getVita() - mat[t1.getPietre().get(0).getElemento().getId() - 1][t2.getPietre().get(0).getElemento().getId() - 1]);
+            else
+                t1.setVita(t1.getVita() + mat[t1.getPietre().get(0).getElemento().getId() - 1][t2.getPietre().get(0).getElemento().getId() - 1]);
+
+            t1.getPietre().add(t1.getPietre().get(0));
+            t1.getPietre().remove(0);
+            t2.getPietre().add(t1.getPietre().get(0));
+            t2.getPietre().remove(0);
         }
-        //Inizializza la deque di pietre2
-        for(int i=0; i<t2.getPietre().size(); i++){
-            pietre2.add(t1.getPietre().get(i));
-        }
-
-        while(t1.getVita() > 0 && t2.getVita() >0){
-
-        }
-        return esausto;
+        if ( t1.getVita() <= 0) return t1;
+        else return t2;
     }
 }
