@@ -43,7 +43,7 @@ public class Battaglia {
 
             //ritrda l'esecuzione di 5 secondi per visualizzare tutto meglio
             try {
-                Thread.sleep(5000); //tempo in millisecondi
+                Thread.sleep(4000); //tempo in millisecondi
             } catch (InterruptedException e) {
             }
         }

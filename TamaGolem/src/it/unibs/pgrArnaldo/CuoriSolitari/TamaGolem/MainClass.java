@@ -61,6 +61,7 @@ public class MainClass {
         Squadra squadra_2 = new Squadra(g1, tama_golems1);
 
         int[][] mat_eq = null;
+        boolean condizione = true;
 
         do {
             for (int fase = 1; fase <= 3; fase++) {
@@ -74,67 +75,67 @@ public class MainClass {
                         ArrayList<Pietra> pietre_g1 = new ArrayList<>(0);
                         ArrayList<Pietra> pietre_g2 = new ArrayList<>(0);
 
-                        if (tama_golems1.get(0).getPietre() == null) {
-                            //GIOCATORE 1; attribuisce al suo tamagolem gli elementi
-                            System.out.println(String.format(Costanti.TURNO, g1) + Costanti.SCELTA);
-                            //Stampa le pietre che il golem può ingurgitare
-                            int k = 0;
-                            for (Elemento e : Equilibrio.getElementi()) {
-                                k++;
-                                System.out.println(k + "- " + e);
-                            }
-                            for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
-                                Elemento elemento = null;
-                                comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
-                                if (comando == 1) {
-                                    elemento = Elemento.ALTAIR;
-                                } else if (comando == 2) {
-                                    elemento = Elemento.EZIO;
-                                } else if (comando == 4) {
-                                    elemento = Elemento.EDWARD;
-                                } else if (comando == 3) {
-                                    elemento = Elemento.CONNOR;
-                                } else if (comando == 5) {
-                                    elemento = Elemento.SHAY;
+                            if (tama_golems1.get(0).getPietre() == null) {
+                                //GIOCATORE 1; attribuisce al suo tamagolem gli elementi
+                                System.out.println(String.format(Costanti.TURNO, g1) + Costanti.SCELTA);
+                                //Stampa le pietre che il golem può ingurgitare
+                                int k = 0;
+                                for (Elemento e : Equilibrio.getElementi()) {
+                                    k++;
+                                    System.out.println(k + "- " + e);
                                 }
+                                for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
+                                    Elemento elemento = null;
+                                    comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
+                                    if (comando == 1) {
+                                        elemento = Elemento.ALTAIR;
+                                    } else if (comando == 2) {
+                                        elemento = Elemento.EZIO;
+                                    } else if (comando == 3) {
+                                        elemento = Elemento.CONNOR;
+                                    } else if (comando == 4) {
+                                        elemento = Elemento.EDWARD;
+                                    } else if (comando == 5) {
+                                        elemento = Elemento.SHAY;
+                                    }
 
-                                Pietra pietra = new Pietra(elemento);
-                                pietre_g1.add(pietra);
-                            }
-                            tama_golems1.get(0).setPietre(pietre_g1);
-                            System.out.println("\n");
-                        }
-
-                        if (tama_golems2.get(0).getPietre() == null) {
-                            //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
-                            System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
-                            //Stampa le pietre che il golem può ingurgitare
-                            int k = 0;
-                            for (Elemento e : Equilibrio.getElementi()) {
-                                k++;
-                                System.out.println(k + "- " + e);
-                            }
-                            for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
-                                Elemento elemento = null;
-                                comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
-                                if (comando == 1) {
-                                    elemento = Elemento.ALTAIR;
-                                } else if (comando == 2) {
-                                    elemento = Elemento.EZIO;
-                                } else if (comando == 4) {
-                                    elemento = Elemento.EDWARD;
-                                } else if (comando == 3) {
-                                    elemento = Elemento.CONNOR;
-                                } else if (comando == 5) {
-                                    elemento = Elemento.SHAY;
+                                    Pietra pietra = new Pietra(elemento);
+                                    pietre_g1.add(pietra);
                                 }
-
-                                Pietra pietra = new Pietra(elemento);
-                                pietre_g2.add(pietra);
+                                tama_golems1.get(0).setPietre(pietre_g1);
+                                System.out.println("\n");
                             }
-                            tama_golems2.get(0).setPietre(pietre_g2);
-                            System.out.println("\n");
-                        }
+
+                            if (tama_golems2.get(0).getPietre() == null) {
+                                //GIOCATORE 2; attribuisce al suo tamagolem gli elementi
+                                System.out.println(String.format(Costanti.TURNO, g2) + Costanti.SCELTA);
+                                //Stampa le pietre che il golem può ingurgitare
+                                int k = 0;
+                                for (Elemento e : Equilibrio.getElementi()) {
+                                    k++;
+                                    System.out.println(k + "- " + e);
+                                }
+                                for (int i = 0; i < Costanti.NUM_PIETRE; i++) {
+                                    Elemento elemento = null;
+                                    comando = InputDati.leggiIntero(String.format("Scegli la pietra numero %d: ", i + 1), 1, Equilibrio.getElementi().length);
+                                    if (comando == 1) {
+                                        elemento = Elemento.ALTAIR;
+                                    } else if (comando == 2) {
+                                        elemento = Elemento.EZIO;
+                                    } else if (comando == 3) {
+                                        elemento = Elemento.CONNOR;
+                                    } else if (comando == 4) {
+                                        elemento = Elemento.EDWARD;
+                                    } else if (comando == 5) {
+                                        elemento = Elemento.SHAY;
+                                    }
+
+                                    Pietra pietra = new Pietra(elemento);
+                                    pietre_g2.add(pietra);
+                                }
+                                tama_golems2.get(0).setPietre(pietre_g2);
+                                System.out.println("\n");
+                            }
 
                         //Gioca la battaglia tra i due tamagolem ed elimina dall'array di tamagolem di uno dei due il tamagolem easusto
                         TamaGolem esausto = Battaglia.combattimento(tama_golems1.get(0), tama_golems2.get(0), mat_eq);
