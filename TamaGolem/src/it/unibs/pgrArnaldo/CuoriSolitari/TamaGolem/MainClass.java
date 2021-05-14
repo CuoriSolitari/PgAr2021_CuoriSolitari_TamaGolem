@@ -1,7 +1,6 @@
 package it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem;
 
-import it.unibs.pgrArnaldo.CuoriSolitari.TamaGolem.UniBSFpLib.src.it.unibs.fp.mylib.InputDati;
-
+import it.unibs.fp.mylib.InputDati;
 import java.io.IOException;
 import java.util.ArrayList;
 
